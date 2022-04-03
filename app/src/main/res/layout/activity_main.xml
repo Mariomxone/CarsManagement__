@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/contrasena" />
 
     <EditText
-        android:id="@+id/usertxt"
+        android:id="@+id/txtUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/passtxt"
+        android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -70,10 +70,10 @@
         android:textColorHint="#050505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/usertxt" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
 
     <Button
-        android:id="@+id/iniciarbtn"
+        android:id="@+id/btnIniciar"
         android:layout_width="200sp"
         android:layout_height="50sp"
         android:layout_marginStart="154dp"
@@ -84,5 +84,5 @@
         android:textColor="#F6F5F5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
