@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CarsManagement"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".salidas"
+            android:exported="false" />
+        <activity
+            android:name=".gestionadmin"
+            android:exported="false" />
+        <activity
             android:name=".Documentacion"
             android:exported="false" />
         <activity

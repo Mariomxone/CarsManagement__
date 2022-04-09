@@ -7,7 +7,7 @@ import retrofit2.http.POST;
 
 public interface ApiService {
 
-    @POST("login")
+    @POST("auth")
 
     @Headers({
             "Accept: application/json",

@@ -3,17 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Luis/StudioProjects/CarsManagement__/app/src/main/res/layout/activity_main.xml" value="0.23822463768115942" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw480dp/activity_main.xml" value="0.61" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_cocheactivity.xml" value="0.176" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_documentacion.xml" value="0.16" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_gestionadmin.xml" value="0.153125" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_principal.xml" value="0.190625" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/activity_salidas.xml" value="0.153125" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/cocheactivity.xml" value="0.190625" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_cocheactivity.xml" value="0.190625" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_documentacion.xml" value="0.17" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_gestionadmin.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_principal.xml" value="0.2" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_salidas.xml" value="0.25" />
       </map>
     </option>
   </component>
