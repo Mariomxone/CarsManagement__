@@ -8,7 +8,7 @@
     tools:context=".Principal">
 
     <Button
-        android:id="@+id/docsbtn9"
+        android:id="@+id/btnman"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -20,10 +20,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView32"
-        app:layout_constraintTop_toBottomOf="@+id/docsbtn8" />
+        app:layout_constraintTop_toBottomOf="@+id/btngas" />
 
     <Button
-        android:id="@+id/docsbtn8"
+        android:id="@+id/btngas"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -35,10 +35,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/docsbtn7" />
+        app:layout_constraintTop_toBottomOf="@+id/btnenter" />
 
     <Button
-        android:id="@+id/docsbtn7"
+        android:id="@+id/btnenter"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -152,7 +152,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/docsbtn7"
+        app:layout_constraintEnd_toStartOf="@+id/btnenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView30"
         app:srcCompat="@drawable/carenter" />
@@ -164,7 +164,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/docsbtn8"
+        app:layout_constraintEnd_toStartOf="@+id/btngas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView31"
         app:srcCompat="@drawable/gasolina" />
@@ -176,7 +176,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/docsbtn9"
+        app:layout_constraintEnd_toStartOf="@+id/btnman"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView16"
         app:srcCompat="@drawable/mantenimiento" />

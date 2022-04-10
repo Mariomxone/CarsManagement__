@@ -13,10 +13,13 @@
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout-sw600dp/cocheactivity.xml" value="0.190625" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_cocheactivity.xml" value="0.190625" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_documentacion.xml" value="0.17" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_entrada.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_gasolina.xml" value="0.12006578947368421" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_gestionadmin.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_mantenimiento.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_principal.xml" value="0.2" />
-        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_salidas.xml" value="0.25" />
+        <entry key="..\:/Users/lopez/AndroidStudioProjects/CarsManagement/app/src/main/res/layout/activity_salidas.xml" value="0.16" />
       </map>
     </option>
   </component>
