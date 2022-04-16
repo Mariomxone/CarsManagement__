@@ -10,18 +10,47 @@ import android.widget.Button;
 public class Principal extends AppCompatActivity {
     Button btnirr;
     Button btnsal;
+    Button btnent;
+    Button btngas;
+    Button btnman;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         btnirr = findViewById(R.id.docubtn);
-        btnsal = findViewById(R.id.btnSalida);
-
-        String carro = getIntent().getStringExtra("carro");
+        btnsal = findViewById(R.id.btnsalida);
+        btnent = findViewById(R.id.btnenter);
+        btngas = findViewById(R.id.btngas);
+        btnman = findViewById(R.id.btnman);
+        //**//
+        btnman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Mantenimiento.class);
+                startActivity(intent);
+            }
+        });
+        //**//
+        btngas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), gasolina.class);
+                startActivity(intent);
+            }
+        });
+        //**//
+        btnent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Entrada.class);
+                startActivity(intent);
+            }
+        });
+        //*//
         btnsal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), salidas.class).putExtra("carro",carro);
+                Intent intent = new Intent(v.getContext(), salidas.class);
                 startActivity(intent);
             }
         });
@@ -29,10 +58,8 @@ public class Principal extends AppCompatActivity {
         btnirr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(v.getContext(), Documentacion.class).putExtra("carro",carro);
+                Intent intent = new Intent(v.getContext(), Documentacion.class);
                 startActivity(intent);
-
             }
         });
 

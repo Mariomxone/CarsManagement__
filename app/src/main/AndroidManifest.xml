@@ -13,6 +13,15 @@
         android:theme="@style/Theme.CarsManagement"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Mantenimiento"
+            android:exported="false" />
+        <activity
+            android:name=".gasolina"
+            android:exported="false" />
+        <activity
+            android:name=".Entrada"
+            android:exported="false" />
+        <activity
             android:name=".salidas"
             android:exported="false" />
         <activity
