@@ -58,9 +58,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/btnir"
+                android:id="@+id/btnGolPlata18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="1"
                 app:srcCompat="@drawable/golplata" />
 
             <TextView
@@ -81,9 +82,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView17"
+                android:id="@+id/btnGolPlata20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="2"
                 app:srcCompat="@drawable/golplata" />
 
             <TextView
@@ -104,9 +106,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/btnTransit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="3"
                 app:srcCompat="@drawable/transit" />
 
             <TextView
@@ -127,9 +130,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView19"
+                android:id="@+id/btnWindstar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="4"
                 app:srcCompat="@drawable/winds" />
 
             <TextView
@@ -150,9 +154,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView20"
+                android:id="@+id/btnGolRojo20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="5"
                 app:srcCompat="@drawable/golrojo" />
 
             <TextView
@@ -173,9 +178,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView21"
+                android:id="@+id/btnPoloRojo20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="6"
                 app:srcCompat="@drawable/projo" />
 
             <TextView
@@ -196,9 +202,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView22"
+                android:id="@+id/btnPoloAzul20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="7"
                 app:srcCompat="@drawable/pazul" />
 
             <TextView
@@ -219,9 +226,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView23"
+                android:id="@+id/btnPoloBlanco20ing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="8"
                 app:srcCompat="@drawable/pblanco" />
 
             <TextView
@@ -242,9 +250,10 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/imageView24"
+                android:id="@+id/btnPoloBlanco20lic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="9"
                 app:srcCompat="@drawable/pblanco" />
 
             <TextView

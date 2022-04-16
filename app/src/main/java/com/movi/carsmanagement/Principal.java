@@ -15,11 +15,13 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         btnirr = findViewById(R.id.docubtn);
-        btnsal = findViewById(R.id.btnsalida);
+        btnsal = findViewById(R.id.btnSalida);
+
+        String carro = getIntent().getStringExtra("carro");
         btnsal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), salidas.class);
+                Intent intent = new Intent(v.getContext(), salidas.class).putExtra("carro",carro);
                 startActivity(intent);
             }
         });
@@ -27,8 +29,10 @@ public class Principal extends AppCompatActivity {
         btnirr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Documentacion.class);
+
+                Intent intent = new Intent(v.getContext(), Documentacion.class).putExtra("carro",carro);
                 startActivity(intent);
+
             }
         });
 

@@ -79,6 +79,7 @@
         android:layout_marginTop="93dp"
         android:layout_marginEnd="155dp"
         android:background="#303F9F"
+        android:contextClickable="false"
         android:text="Iniciar Sesion"
         android:textColor="#F6F5F5"
         app:layout_constraintEnd_toEndOf="parent"

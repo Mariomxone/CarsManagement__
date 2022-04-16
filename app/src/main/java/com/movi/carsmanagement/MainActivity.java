@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.io.IOException;
 
 import Model.ApiService;
+import Model.Global;
 import Model.User;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -40,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         btnir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnir.setClickable(false);
                 loginUser();
+
 
             }
         });
@@ -50,25 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void loginUser() {
 
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(logging)
-                .build();
-
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.100.12:80")
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        Retrofit retrofit= Retroconf.getRetrofit();
 
 
         //Toast.makeText(MainActivity.this,retrofit.toString(), Toast.LENGTH_LONG).show();
 
         ApiService service = retrofit.create(ApiService.class);
 
-        User user = new User(txtUsuario.getText().toString(),txtPassword    .getText().toString());
+        User user = new User(txtUsuario.getText().toString(),txtPassword.getText().toString());
 
         Call<User> call =service.loginUser(user);
 
@@ -81,17 +73,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()){
+                    Global.setUser(txtUsuario.getText().toString());
                     Toast.makeText(MainActivity.this, "Server code correct!"+ response.toString(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), Cocheactivity.class);
                     startActivity(intent);
                 }
                 else{
+                    btnir.setClickable(true);
                     try {
                         Toast.makeText(MainActivity.this, "Server code unsuccesfull!"+ response.errorBody().string(), Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
+
             }
 
             @Override
@@ -99,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Lokesh", "Login fail::" + t.toString());
 
                 Toast.makeText(MainActivity.this, "Login fail!"+t.toString(), Toast.LENGTH_SHORT).show();
+                btnir.setClickable(true);
             }
         });
 

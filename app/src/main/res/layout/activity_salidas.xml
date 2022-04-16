@@ -8,13 +8,13 @@
     tools:context=".salidas">
 
     <EditText
-        android:id="@+id/usertxt"
+        android:id="@+id/txtKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt4"
+        app:layout_constraintBottom_toTopOf="@+id/txtMarca"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -105,17 +105,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt4"
+        android:id="@+id/txtMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt5"
+        app:layout_constraintBottom_toTopOf="@+id/txtModelo"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt9"
+        android:id="@+id/txtVin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -126,43 +126,43 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt8"
+        android:id="@+id/txtPlaca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt9"
+        app:layout_constraintBottom_toTopOf="@+id/txtVin"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt6"
+        android:id="@+id/txtAnio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt7"
+        app:layout_constraintBottom_toTopOf="@+id/txtColor"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt7"
+        android:id="@+id/txtColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt8"
+        app:layout_constraintBottom_toTopOf="@+id/txtPlaca"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/usertxt5"
+        android:id="@+id/txtModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt6"
+        app:layout_constraintBottom_toTopOf="@+id/txtAnio"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -215,7 +215,7 @@
         android:text="Datos del Vehículo"
         android:textColor="#0C0C0C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/usertxt"
+        app:layout_constraintBottom_toTopOf="@+id/txtKm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar7" />
@@ -327,7 +327,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView44"
+        android:id="@+id/txtUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -348,6 +348,6 @@
         android:textColor="#FDFCFC"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/toolbar7"
-        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
