@@ -4,12 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import Model.Global;
+import Conf.Global;
 
 public class Cocheactivity extends AppCompatActivity {
     ImageView [] carros = new ImageView[9];

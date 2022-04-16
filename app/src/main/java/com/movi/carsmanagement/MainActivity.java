@@ -2,6 +2,7 @@ package com.movi.carsmanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,22 +13,23 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-import Model.ApiService;
-import Model.Global;
+import Conf.ApiService;
+import Conf.Global;
 import Model.User;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnir;
     EditText txtUsuario;
     EditText txtPassword;
+    ProgressDialog progressDialog;
+    Call<User> call;
+    boolean finished;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,28 @@ public class MainActivity extends AppCompatActivity {
         btnir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnir.setClickable(false);
+                finished =false;
                 loginUser();
+                progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setMessage("Validado credenciales"); // Setting Message
+                progressDialog.setTitle("Inicio de sesión"); // Setting Title
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+                progressDialog.show(); // Display Progress Dialog
+                progressDialog.setCancelable(false);
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            while (finished == false){
+                                Thread.sleep(500);
+                            }
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        progressDialog.dismiss();
+                    }
+                }).start();
+
 
 
             }
@@ -62,26 +84,29 @@ public class MainActivity extends AppCompatActivity {
 
         User user = new User(txtUsuario.getText().toString(),txtPassword.getText().toString());
 
-        Call<User> call =service.loginUser(user);
+        call =service.loginUser(user);
 
 
-
-        //Toast.makeText(MainActivity.this, , Toast.LENGTH_LONG).show();
-
-
+        if(call.isExecuted()){
+            return;
+        }
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
+                finished = true;
                 if(response.isSuccessful()){
                     Global.setUser(txtUsuario.getText().toString());
-                    Toast.makeText(MainActivity.this, "Server code correct!"+ response.toString(), Toast.LENGTH_SHORT).show();
+                    Global.setUserId(response.body().getId());
+                    Toasty.success(getApplicationContext(), "Bienvenido", Toast.LENGTH_SHORT, true).show();
                     Intent intent = new Intent(getApplicationContext(), Cocheactivity.class);
+                    finishAffinity();
                     startActivity(intent);
                 }
                 else{
                     btnir.setClickable(true);
                     try {
-                        Toast.makeText(MainActivity.this, "Server code unsuccesfull!"+ response.errorBody().string(), Toast.LENGTH_SHORT).show();
+
+                        Toasty.warning(MainActivity.this, response.errorBody().string(), Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -91,9 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                finished = true;
                 Log.d("Lokesh", "Login fail::" + t.toString());
 
-                Toast.makeText(MainActivity.this, "Login fail!"+t.toString(), Toast.LENGTH_SHORT).show();
+                Toasty.error(MainActivity.this, "Error de comunicación con el servidor"+t.getMessage(), Toast.LENGTH_SHORT).show();
                 btnir.setClickable(true);
             }
         });

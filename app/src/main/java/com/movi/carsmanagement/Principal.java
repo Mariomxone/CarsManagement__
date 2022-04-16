@@ -18,7 +18,7 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         btnirr = findViewById(R.id.docubtn);
-        btnsal = findViewById(R.id.btnsalida);
+        btnsal = findViewById(R.id.btnSalida);
         btnent = findViewById(R.id.btnenter);
         btngas = findViewById(R.id.btngas);
         btnman = findViewById(R.id.btnman);

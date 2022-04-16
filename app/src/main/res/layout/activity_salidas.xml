@@ -204,6 +204,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:srcCompat="@drawable/logosdta" />
+
+        <Button
+            android:id="@+id/btnGuardarSalida"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
@@ -242,7 +248,7 @@
                 android:textSize="24sp" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/cbPoliza"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -250,21 +256,21 @@
                 android:textAlignment="viewStart" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/cbCirculacion"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Tarjeta de circulación" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/cbVerificacion"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Verificación" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/cbTenencia"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -279,35 +285,35 @@
                 android:textSize="24sp" />
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/cbLlanta"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Llanta de refacción" />
 
             <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/cbGato"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="gato Hidraulico" />
 
             <CheckBox
-                android:id="@+id/checkBox7"
+                android:id="@+id/cbCruceta"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Cruceta / llave cruz" />
 
             <CheckBox
-                android:id="@+id/checkBox9"
+                android:id="@+id/cbExtintor"
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Extintor" />
 
             <TextView
-                android:id="@+id/textView61"
+                android:id="@+id/tvObservaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Observaciones"
@@ -315,7 +321,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/etObservaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

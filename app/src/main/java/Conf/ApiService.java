@@ -1,7 +1,10 @@
-package Model;
+package Conf;
 
 import java.util.List;
 
+import Model.Carro;
+import Model.Salida;
+import Model.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -27,4 +30,11 @@ public interface ApiService {
             "Content-Type: application/json",
     })
     Call<Carro> getUser (@Path("id") int id);
+
+    @POST("salida")
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json",
+    })
+    Call<Salida> guardarSalida(@Body Salida salida);
 }

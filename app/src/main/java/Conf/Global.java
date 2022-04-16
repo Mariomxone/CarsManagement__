@@ -1,4 +1,4 @@
-package Model;
+package Conf;
 
 public class Global {
         public static String getUser() {
@@ -21,4 +21,14 @@ public class Global {
         }
 
         public static int carro;
+
+        public static int getUserId() {
+                return userId;
+        }
+
+        public static void setUserId(int userId) {
+                Global.userId = userId;
+        }
+
+        public static int userId;
 }
